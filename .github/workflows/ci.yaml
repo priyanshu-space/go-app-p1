@@ -58,7 +58,7 @@ jobs:
       with:
         version: v1.56.2
         install-mode: binary
-        working-directory: ./go-web-app
+        working-directory: ./web-go-app
   
   push:
     runs-on: ubuntu-latest
