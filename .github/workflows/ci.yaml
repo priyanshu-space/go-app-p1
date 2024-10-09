@@ -43,6 +43,7 @@ jobs:
       run: go build -o web-go-app
 
     - name: Test
+      working-directory: ./web-go-app
       run: go test ./...
   
   code-quality:
