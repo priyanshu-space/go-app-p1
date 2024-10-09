@@ -43,7 +43,7 @@ jobs:
       run: go build -o web-go-app
 
     - name: Test
-      working-directory: ./web-go-app
+      working-directory: ./web-go-app #specify the correct directory
       run: go test ./...
   
   code-quality:
@@ -51,11 +51,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      working-directory: ./web-go-app
       uses: actions/checkout@v4
 
     - name: Run golangci-lint
-      working-directory: ./web-go-app
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.56.2
