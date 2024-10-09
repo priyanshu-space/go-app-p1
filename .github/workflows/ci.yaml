@@ -57,6 +57,7 @@ jobs:
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.56.2
+      working-directory: ./web-go-app
   
   push:
     runs-on: ubuntu-latest
