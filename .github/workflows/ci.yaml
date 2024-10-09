@@ -35,15 +35,11 @@ jobs:
           ${{ runner.os }}-go-
 
     - name: Install dependencies
+      working-directory: ./go-web-app  # Specify the correct directory
       run: go mod tidy
 
-    - name: Check current directory
-      run: pwd
-  
-    - name: List files in current directory
-      run: ls -la
-
     - name: Build
+      working-directory: ./go-web-app  # Specify the correct directory
       run: go build -o go-web-app
 
     - name: Test
