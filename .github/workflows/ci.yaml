@@ -51,9 +51,11 @@ jobs:
 
     steps:
     - name: Checkout repository
+      working-directory: ./web-go-app
       uses: actions/checkout@v4
 
     - name: Run golangci-lint
+      working-directory: ./web-go-app
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.56.2
