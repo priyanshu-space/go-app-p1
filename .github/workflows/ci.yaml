@@ -35,12 +35,12 @@ jobs:
           ${{ runner.os }}-go-
 
     - name: Install dependencies
-      working-directory: ./go-web-app  # Specify the correct directory
+      working-directory: ./web-go-app  # Specify the correct directory
       run: go mod tidy
 
     - name: Build
-      working-directory: ./go-web-app  # Specify the correct directory
-      run: go build -o go-web-app
+      working-directory: ./web-go-app  # Specify the correct directory
+      run: go build -o web-go-app
 
     - name: Test
       run: go test ./...
